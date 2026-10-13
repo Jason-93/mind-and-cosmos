@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router'
 import { Orbit, Menu, X } from 'lucide-react'
+import { scrollToId } from '@/lib/scroll'
 
 const LINKS = [
   { id: 'map', label: '导读' },
@@ -15,10 +17,17 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [active, setActive] = useState('')
   const [open, setOpen] = useState(false)
+  const navigate = useNavigate()
+  const { pathname } = useLocation()
+  const onHome = pathname === '/'
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 40)
+      if (!onHome) {
+        setActive('')
+        return
+      }
       let current = ''
       for (const l of LINKS) {
         const el = document.getElementById(l.id)
@@ -29,30 +38,49 @@ export default function Nav() {
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  }, [onHome])
+
+  const goSection = (id: string) => {
+    setOpen(false)
+    if (onHome) {
+      scrollToId(id)
+    } else {
+      navigate('/')
+      setTimeout(() => scrollToId(id), 120)
+    }
+  }
+
+  const goTop = () => {
+    setOpen(false)
+    if (onHome) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      navigate('/')
+    }
+  }
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'border-b border-white/10 bg-[#060a16]/85 backdrop-blur-md' : 'bg-transparent'
+        scrolled || !onHome ? 'border-b border-white/10 bg-[#060a16]/85 backdrop-blur-md' : 'bg-transparent'
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
-        <a href="#top" className="flex items-center gap-2.5">
+        <button onClick={goTop} className="flex items-center gap-2.5">
           <Orbit className="h-6 w-6 text-violet-300" />
           <span className="font-serif-sc text-lg font-bold tracking-wide">心物宇宙</span>
-        </a>
+        </button>
         <div className="hidden items-center gap-1 md:flex">
           {LINKS.map((l) => (
-            <a
+            <button
               key={l.id}
-              href={`#${l.id}`}
+              onClick={() => goSection(l.id)}
               className={`rounded-full px-3.5 py-1.5 text-sm transition-colors ${
                 active === l.id ? 'bg-white/10 text-white' : 'text-slate-400 hover:text-white'
               }`}
             >
               {l.label}
-            </a>
+            </button>
           ))}
         </div>
         <button
@@ -66,14 +94,13 @@ export default function Nav() {
       {open && (
         <div className="border-t border-white/10 bg-[#060a16]/95 px-5 py-3 backdrop-blur-md md:hidden">
           {LINKS.map((l) => (
-            <a
+            <button
               key={l.id}
-              href={`#${l.id}`}
-              onClick={() => setOpen(false)}
-              className="block rounded-lg px-3 py-2.5 text-sm text-slate-300 hover:bg-white/5"
+              onClick={() => goSection(l.id)}
+              className="block w-full rounded-lg px-3 py-2.5 text-left text-sm text-slate-300 hover:bg-white/5"
             >
               {l.label}
-            </a>
+            </button>
           ))}
         </div>
       )}

@@ -2,10 +2,11 @@ import { Landmark, Flower2, Moon, Church, Scale } from 'lucide-react'
 import Reveal from '@/components/Reveal'
 import { SectionHeading, ConceptCard, ThoughtBox, Takeaway, type Accent } from '@/components/ui-bits'
 
-const TRADITIONS: { icon: typeof Landmark; tag: string; title: string; body: string; accent: Accent }[] = [
+const TRADITIONS: { id: string; icon: typeof Landmark; tag: string; title: string; body: string; accent: Accent }[] = [
   {
     icon: Landmark,
     tag: '古希腊',
+    id: 'greek',
     title: '逻各斯：用理性追问本原',
     body: '从泰勒斯说"万物源于水"开始，希腊人把神话问题改写成了可辩论的问题。柏拉图认为可见世界只是"理念世界"的投影；亚里士多德则回到具体事物，寻找形式与质料；斯多葛学派说，理解自然的秩序就是自由。西方哲学的整个传统，可以说就是这条理性的延长线。',
     accent: 'amber',
@@ -13,6 +14,7 @@ const TRADITIONS: { icon: typeof Landmark; tag: string; title: string; body: str
   {
     icon: Flower2,
     tag: '印度传统',
+    id: 'india',
     title: '梵与空：向内观看的意识之学',
     body: '吠檀多哲学问："世界背后那个不变者是什么？"答案是"梵"——而个体灵魂（阿特曼）与梵本是一体。佛教走了另一条路：万物依缘而生，"自我"只是五蕴的暂时聚合，并没有一个固定的"我"。印度传统把主战场放在意识内部——这恰恰也是当代意识科学的战场。',
     accent: 'rose',
@@ -20,6 +22,7 @@ const TRADITIONS: { icon: typeof Landmark; tag: string; title: string; body: str
   {
     icon: Moon,
     tag: '中国思想',
+    id: 'china',
     title: '道与天人合一：不二的直觉',
     body: '老子说"道生一，一生二，二生三，三生万物"，道的特点恰恰是"说不清"。庄子梦见自己变成蝴蝶，醒来后问：是庄周梦蝶，还是蝶梦庄周？这个两千年前的"思想实验"，预演了后来身心关系争论的核心困难——体验的"主观视角"无法被外部观察取代。',
     accent: 'emerald',
@@ -27,6 +30,7 @@ const TRADITIONS: { icon: typeof Landmark; tag: string; title: string; body: str
   {
     icon: Church,
     tag: '亚伯拉罕宗教',
+    id: 'abrahamic',
     title: '创造与逻各斯的合流',
     body: '犹太教、基督教、伊斯兰教共享"世界被造"的图景：存在不是必然的，而是被给予的。早期基督教思想家奥古斯丁把柏拉图接进信仰，托马斯·阿奎那又用亚里士多德论证上帝。值得一提的是，历史上的大学、历法与大量科学事业，正是诞生在这种"世界有秩序、值得研究"的信念里。',
     accent: 'indigo',
@@ -34,6 +38,7 @@ const TRADITIONS: { icon: typeof Landmark; tag: string; title: string; body: str
   {
     icon: Scale,
     tag: '共同结构',
+    id: 'motifs',
     title: '殊途同归的三个母题',
     body: '把各大传统放在一起看，会发现三个反复出现的母题：一、可见世界背后有更深的一层实在（理念、梵、道、天国）；二、人与那层实在可以建立关系（修行、信仰、求知）；三、死亡与意义问题必须被正面回答。宗教给出意义与秩序，哲学则追问这些说法能否经得起论证。',
     accent: 'violet',
@@ -52,7 +57,7 @@ export default function Philosophy() {
       />
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {TRADITIONS.map((t, i) => (
-          <ConceptCard key={t.title} icon={t.icon} tag={t.tag} title={t.title} body={t.body} accent={t.accent} delay={(i % 3) * 120} />
+          <ConceptCard key={t.title} id={t.id} icon={t.icon} tag={t.tag} title={t.title} body={t.body} accent={t.accent} delay={(i % 3) * 120} />
         ))}
         <Reveal className="md:col-span-2 lg:col-span-1">
           <div className="glass flex h-full flex-col justify-center rounded-2xl p-6">

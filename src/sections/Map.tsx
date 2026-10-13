@@ -1,21 +1,24 @@
 import { Brain, Atom, Sparkles, HelpCircle } from 'lucide-react'
 import { SectionHeading, ConceptCard, ThoughtBox, type Accent } from '@/components/ui-bits'
 
-const QUESTIONS: { icon: typeof Brain; title: string; body: string; accent: Accent }[] = [
+const QUESTIONS: { id: string; icon: typeof Brain; title: string; body: string; accent: Accent }[] = [
   {
     icon: Brain,
+    id: 'question-mind',
     title: '心智之问',
     body: '颜色的"红"、疼痛的"痛"、深夜的"我"，这些主观体验（哲学家称之为"感质"）为什么会存在？一团约 1.4 千克的脑组织，凭什么能产生"有人在家"的感觉？',
     accent: 'violet',
   },
   {
     icon: Atom,
+    id: 'question-matter',
     title: '物质之问',
     body: '桌子、星星、我们的身体，归根结底由原子构成；而原子 99.9999999% 是空的，其余是些听名字就像咒语的粒子。物质真的是"实心"的吗？还是关系与场的编织物？',
     accent: 'cyan',
   },
   {
     icon: Sparkles,
+    id: 'question-origin',
     title: '起源之问',
     body: '宇宙大约 138 亿年前诞生于一场大爆炸。但"之前"发生了什么？"爆炸"之外又是什么？为什么"无"中会"有"——而且是一个有规则、可理解的"有"？',
     accent: 'rose',
@@ -34,7 +37,7 @@ export default function Map() {
       />
       <div className="grid gap-6 md:grid-cols-3">
         {QUESTIONS.map((q, i) => (
-          <ConceptCard key={q.title} icon={q.icon} title={q.title} body={q.body} accent={q.accent} delay={i * 120} />
+          <ConceptCard key={q.title} id={q.id} icon={q.icon} title={q.title} body={q.body} accent={q.accent} delay={i * 120} />
         ))}
       </div>
       <div className="mt-14">

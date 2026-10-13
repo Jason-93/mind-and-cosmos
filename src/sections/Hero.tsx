@@ -1,5 +1,6 @@
 import { ChevronDown } from 'lucide-react'
 import Reveal from '@/components/Reveal'
+import { scrollToId } from '@/lib/scroll'
 
 export default function Hero() {
   return (
@@ -32,18 +33,18 @@ export default function Hero() {
       </Reveal>
       <Reveal delay={480}>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="#map"
+          <button
+            onClick={() => scrollToId('map')}
             className="rounded-full bg-violet-500/90 px-7 py-3 text-sm font-medium text-white shadow-lg shadow-violet-500/25 transition hover:bg-violet-400"
           >
             开始漫游
-          </a>
-          <a
-            href="#finale"
+          </button>
+          <button
+            onClick={() => scrollToId('finale')}
             className="rounded-full border border-white/15 px-7 py-3 text-sm text-slate-300 transition hover:border-white/35 hover:text-white"
           >
             直接看结论
-          </a>
+          </button>
         </div>
       </Reveal>
       <Reveal delay={650} className="absolute bottom-10">

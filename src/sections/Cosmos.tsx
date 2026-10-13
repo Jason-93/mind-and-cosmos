@@ -2,10 +2,11 @@ import { Rocket, Wind, Recycle, Compass, Percent } from 'lucide-react'
 import Reveal from '@/components/Reveal'
 import { SectionHeading, ConceptCard, ThoughtBox, Takeaway, type Accent } from '@/components/ui-bits'
 
-const STORIES: { icon: typeof Rocket; tag: string; title: string; body: string; accent: Accent }[] = [
+const STORIES: { id: string; icon: typeof Rocket; tag: string; title: string; body: string; accent: Accent }[] = [
   {
     icon: Rocket,
     tag: '主流图景',
+    id: 'bigbang',
     title: '大爆炸：一场没有"中心"的膨胀',
     body: '1929 年哈勃发现星系在彼此远离——不是飞向某个远方，而是空间本身在均匀膨胀，就像葡萄干面包发酵时彼此远离的葡萄干。追溯回去，宇宙曾处于一个极端高温高密的初始状态。1965 年发现的宇宙微波背景辐射（CMB）是它的"婴儿照"：一场 138 亿年前的光，至今仍在我们的收音机上沙沙作响。',
     accent: 'rose',
@@ -13,6 +14,7 @@ const STORIES: { icon: typeof Rocket; tag: string; title: string; body: string; 
   {
     icon: Wind,
     tag: '补丁与深化',
+    id: 'inflation',
     title: '暴胀：把种子吹成星系',
     body: '标准大爆炸理论有几个麻烦（如"视界问题"：宇宙各处温度为何如此均匀？）。暴胀理论说：宇宙在最初的极瞬间以远超光速的节奏指数膨胀——这里的"超光速"不违反相对论，因为膨胀的是空间本身。这一瞬的量子涨落被放大到天文尺度，成为后来星系、甚至你我身体原子的分布"种子"。2010 年代的 BICEP 与普朗克卫星数据支持了这一图景的关键一环。',
     accent: 'cyan',
@@ -20,6 +22,7 @@ const STORIES: { icon: typeof Rocket; tag: string; title: string; body: string; 
   {
     icon: Percent,
     tag: '成分之谜',
+    id: 'dark',
     title: '95% 是"暗"的：我们只是一层薄纱',
     body: '通过对超新星、CMB 与大尺度结构的测量，宇宙学得出一个近乎荒诞的结论：普通物质（你我、恒星、行星）只占约 5%；约 27% 是不可见的"暗物质"，它产生引力却不发光；约 68% 是更离奇的"暗能量"，推动宇宙加速膨胀。它们的本质完全未知——宇宙学标准模型在极其成功的同时，坦承自己描述了绝大多数未解成分。',
     accent: 'amber',
@@ -27,6 +30,7 @@ const STORIES: { icon: typeof Rocket; tag: string; title: string; body: string; 
   {
     icon: Recycle,
     tag: '替代图景',
+    id: 'cyclic',
     title: '循环宇宙：没有开始，也没有结束？',
     body: '如果"大爆炸之前"这个问题让你不舒服，你不是一个人。彭罗斯的"共形循环宇宙学"（CCC）提出：宇宙经历无限多轮，遥远的未来与新的起点在数学上可以无缝焊接。另一类"大反弹"模型（与圈量子引力天然契合）认为，到达极致密度时引力会反转排斥，宇宙从坍缩中"反弹"重生。它们共同废除了"时间起点"这个概念。',
     accent: 'emerald',
@@ -34,6 +38,7 @@ const STORIES: { icon: typeof Rocket; tag: string; title: string; body: string; 
   {
     icon: Compass,
     tag: '终极之问',
+    id: 'why-anything',
     title: '"无"中何以生"有"？',
     body: '霍金与哈特尔的无边界提案尝试取消"之前"这个问题：就像问"地球北极以北是什么"没有意义，时间在大爆炸处光滑闭合，根本不存在"之前"。另一思路来自量子场论："真空"并不空——它充满沸腾的量子涨落，一个极小区域的能量借据可以"凭空"扩张成整个宇宙。这些方案在数学上精巧，却共同触到一个哲学深水区："为什么存在任何东西，而不是一无所有？"——莱布尼茨 300 年前的提问，至今悬置。',
     accent: 'violet',
@@ -52,7 +57,7 @@ export default function Cosmos() {
       />
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {STORIES.map((s, i) => (
-          <ConceptCard key={s.title} icon={s.icon} tag={s.tag} title={s.title} body={s.body} accent={s.accent} delay={(i % 3) * 120} />
+          <ConceptCard key={s.title} id={s.id} icon={s.icon} tag={s.tag} title={s.title} body={s.body} accent={s.accent} delay={(i % 3) * 120} />
         ))}
         <Reveal className="md:col-span-2 lg:col-span-1">
           <div className="glass flex h-full flex-col justify-center rounded-2xl p-6">

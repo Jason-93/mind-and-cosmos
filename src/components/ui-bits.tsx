@@ -1,4 +1,6 @@
 import type { ReactNode } from 'react'
+import { Link } from 'react-router'
+import { ArrowRight } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import Reveal from '@/components/Reveal'
 
@@ -56,7 +58,7 @@ export function SectionHeading({
   )
 }
 
-/** 概念卡片 */
+/** 概念卡片（传 id 时整卡可跳转至详情页） */
 export function ConceptCard({
   icon: Icon,
   title,
@@ -64,6 +66,7 @@ export function ConceptCard({
   tag,
   accent,
   delay = 0,
+  id,
 }: {
   icon: LucideIcon
   title: string
@@ -71,21 +74,36 @@ export function ConceptCard({
   tag?: string
   accent: Accent
   delay?: number
+  id?: string
 }) {
+  const card = (
+    <div className="glass glass-hover flex h-full flex-col rounded-2xl p-6">
+      <div className={`mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl ${accentBg[accent]} ${accentText[accent]}`}>
+        <Icon className="h-5 w-5" />
+      </div>
+      {tag && (
+        <span className={`mb-2 inline-block w-fit rounded-full border px-2.5 py-0.5 text-xs ${accentBorder[accent]} ${accentText[accent]}`}>
+          {tag}
+        </span>
+      )}
+      <h3 className="font-serif-sc mb-2 text-xl font-semibold">{title}</h3>
+      <p className="text-sm leading-relaxed text-slate-400">{body}</p>
+      {id && (
+        <span className={`mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-medium ${accentText[accent]}`}>
+          深入阅读 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+        </span>
+      )}
+    </div>
+  )
   return (
     <Reveal delay={delay} className="h-full">
-      <div className="glass glass-hover flex h-full flex-col rounded-2xl p-6">
-        <div className={`mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl ${accentBg[accent]} ${accentText[accent]}`}>
-          <Icon className="h-5 w-5" />
-        </div>
-        {tag && (
-          <span className={`mb-2 inline-block w-fit rounded-full border px-2.5 py-0.5 text-xs ${accentBorder[accent]} ${accentText[accent]}`}>
-            {tag}
-          </span>
-        )}
-        <h3 className="font-serif-sc mb-2 text-xl font-semibold">{title}</h3>
-        <p className="text-sm leading-relaxed text-slate-400">{body}</p>
-      </div>
+      {id ? (
+        <Link to={`/topic/${id}`} className="group block h-full">
+          {card}
+        </Link>
+      ) : (
+        card
+      )}
     </Reveal>
   )
 }
