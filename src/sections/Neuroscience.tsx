@@ -1,4 +1,4 @@
-import { Scissors, Timer, RadioTower, Sigma, Radar } from 'lucide-react'
+import { Scissors, Timer, RadioTower, Sigma, Radar, Dna } from 'lucide-react'
 import Reveal from '@/components/Reveal'
 import { SectionHeading, ConceptCard, ThoughtBox, Takeaway, type Accent } from '@/components/ui-bits'
 
@@ -41,6 +41,14 @@ const FINDINGS: { id: string; icon: typeof Scissors; tag: string; title: string;
     id: 'predictive',
     title: '预测处理：大脑是台"猜测机器"',
     body: '自由能原理与预测加工理论认为：大脑从不被动接收世界，而是持续生成关于世界的预测，再用感官误差修正自己。你"看到"的，更多是脑的期望，而非视网膜的输入。这条思路统一解释了大量现象——从幻觉、错觉到注意与动作——还把"自我意识"解释成大脑对自身预测活动的建模。',
+    accent: 'amber',
+  },
+  {
+    id: 'evolution',
+    icon: Dna,
+    tag: '演化视角',
+    title: '意识的演化：为什么会有体验者？',
+    body: '如果僵尸可以完成全部生存任务，自然选择为什么要“发明”体验？从注意图式理论到章鱼与乌鸦独立演化的智能，体验是适应的目标，还是高效计算的副产品？',
     accent: 'amber',
   },
 ]

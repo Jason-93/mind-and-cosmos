@@ -10,6 +10,7 @@ const LINKS = [
   { id: 'neuro', label: '神经科学' },
   { id: 'physics', label: '物理前沿' },
   { id: 'identity', label: '粒子与轮回' },
+  { id: 'observer', label: '观测者' },
   { id: 'cosmos', label: '宇宙起源' },
   { id: 'finale', label: '结语' },
 ]

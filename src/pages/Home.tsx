@@ -7,6 +7,7 @@ import MindBody from '@/sections/MindBody'
 import Neuroscience from '@/sections/Neuroscience'
 import Physics from '@/sections/Physics'
 import Identity from '@/sections/Identity'
+import Observer from '@/sections/Observer'
 import Cosmos from '@/sections/Cosmos'
 import Finale from '@/sections/Finale'
 
@@ -29,6 +30,8 @@ export default function Home() {
         <Physics />
         <div className="h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
         <Identity />
+        <div className="h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
+        <Observer />
         <div className="h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
         <Cosmos />
         <div className="h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />

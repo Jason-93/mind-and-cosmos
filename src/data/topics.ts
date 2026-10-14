@@ -6,6 +6,7 @@ import { mindBodyTopics } from './topics-mindbody'
 import { neuroscienceTopics } from './topics-neuro'
 import { physicsTopics } from './topics-physics'
 import { identityTopics } from './topics-identity'
+import { observerTopics } from './topics-observer'
 import { cosmosTopics } from './topics-cosmos'
 
 export const ALL_TOPICS: TopicDetail[] = [
@@ -15,6 +16,7 @@ export const ALL_TOPICS: TopicDetail[] = [
   ...neuroscienceTopics,
   ...physicsTopics,
   ...identityTopics,
+  ...observerTopics,
   ...cosmosTopics,
 ]
 

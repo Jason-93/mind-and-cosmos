@@ -1,4 +1,4 @@
-import { Rocket, Wind, Recycle, Compass, Percent } from 'lucide-react'
+import { Rocket, Wind, Recycle, Compass, Percent, Leaf, Satellite } from 'lucide-react'
 import Reveal from '@/components/Reveal'
 import { SectionHeading, ConceptCard, ThoughtBox, Takeaway, type Accent } from '@/components/ui-bits'
 
@@ -28,6 +28,22 @@ const STORIES: { id: string; icon: typeof Rocket; tag: string; title: string; bo
     accent: 'amber',
   },
   {
+    id: 'abiogenesis',
+    icon: Leaf,
+    tag: '生命起源',
+    title: '生命的起源：从化学到生物学的断裂带',
+    body: '元素来源已基本查明，但从原子到第一个细胞的跨越至今无一条被证实的路径。RNA 世界、代谢优先、膜优先三条路线各困于各自的“鸡生蛋”——而它决定了我们在宇宙中是否孤独。',
+    accent: 'emerald',
+  },
+  {
+    id: 'fermi',
+    icon: Satellite,
+    tag: '费米悖论',
+    title: '费米悖论：宇宙为何如此寂静',
+    body: '1950 年费米一句“他们在哪”悬置至今：行星比比皆是，文明却无声无息。一百个候选解答——大过滤器、自我毁灭、内卷、动物园——每一个都指向人类不同的命运。',
+    accent: 'indigo',
+  },
+  {
     icon: Recycle,
     tag: '替代图景',
     id: 'cyclic',
@@ -49,7 +65,7 @@ export default function Cosmos() {
   return (
     <section id="cosmos" className="relative mx-auto max-w-6xl px-6 py-28">
       <SectionHeading
-        index="06"
+        index="07"
         kicker="宇宙起源的解释"
         title="138 亿年前的第一秒"
         subtitle="宇宙学大概是人类最“年轻也最古老”的学科：它用几十年的精密仪器，回答创世神话问了几千年的问题。"
