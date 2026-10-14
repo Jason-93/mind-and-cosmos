@@ -3,7 +3,7 @@ import type { TopicDetail } from './types'
 export const identityTopics: TopicDetail[] = [
   {
     id: 'particle-identity',
-    section: '05 · 量子身份之谜',
+    section: '06 · 量子身份之谜',
     sectionAnchor: 'identity',
     questions: ['matter'],
     related: ['one-electron', 'recurrence', 'contextuality', 'qm-foundations'],
@@ -60,7 +60,7 @@ export const identityTopics: TopicDetail[] = [
   },
   {
     id: 'one-electron',
-    section: '05 · 量子身份之谜',
+    section: '06 · 量子身份之谜',
     sectionAnchor: 'identity',
     questions: ['matter', 'origin'],
     related: ['particle-identity', 'recurrence', 'delayed-choice', 'emergent-spacetime'],
@@ -117,7 +117,7 @@ export const identityTopics: TopicDetail[] = [
   },
   {
     id: 'recurrence',
-    section: '05 · 量子身份之谜',
+    section: '06 · 量子身份之谜',
     sectionAnchor: 'identity',
     questions: ['origin'],
     related: ['one-electron', 'cyclic', 'why-anything', 'fermi'],

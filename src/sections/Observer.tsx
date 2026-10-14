@@ -48,7 +48,7 @@ export default function Observer() {
   return (
     <section id="observer" className="relative mx-auto max-w-6xl px-6 py-28">
       <SectionHeading
-        index="06"
+        index="07"
         kicker="观测者的物理学"
         title="观察不是偷看，而是参与"
         subtitle="延迟选择、量子擦除、参与性宇宙——“it from bit”最激进的部分不是哲学宣言，而是一系列可以精确完成的实验。"

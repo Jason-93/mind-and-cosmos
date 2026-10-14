@@ -5,6 +5,7 @@ import Map from '@/sections/Map'
 import Philosophy from '@/sections/Philosophy'
 import MindBody from '@/sections/MindBody'
 import Neuroscience from '@/sections/Neuroscience'
+import Freewill from '@/sections/Freewill'
 import Physics from '@/sections/Physics'
 import Identity from '@/sections/Identity'
 import Observer from '@/sections/Observer'
@@ -26,6 +27,8 @@ export default function Home() {
         <MindBody />
         <div className="h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
         <Neuroscience />
+        <div className="h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
+        <Freewill />
         <div className="h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
         <Physics />
         <div className="h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />

@@ -3,7 +3,7 @@ import type { TopicDetail } from './types'
 export const physicsTopics: TopicDetail[] = [
   {
     id: 'qm-foundations',
-    section: '04 · 理论物理前沿',
+    section: '05 · 理论物理前沿',
     sectionAnchor: 'physics',
     questions: ['matter'],
     related: ['delayed-choice', 'eraser', 'contextuality', 'relational'],
@@ -56,7 +56,7 @@ export const physicsTopics: TopicDetail[] = [
   },
   {
     id: 'string',
-    section: '04 · 理论物理前沿',
+    section: '05 · 理论物理前沿',
     sectionAnchor: 'physics',
     questions: ['matter'],
     related: ['lqg', 'holography', 'emergent-spacetime', 'inflation'],
@@ -107,7 +107,7 @@ export const physicsTopics: TopicDetail[] = [
   },
   {
     id: 'lqg',
-    section: '04 · 理论物理前沿',
+    section: '05 · 理论物理前沿',
     sectionAnchor: 'physics',
     questions: ['matter', 'origin'],
     related: ['string', 'emergent-spacetime', 'cyclic', 'inflation'],
@@ -158,7 +158,7 @@ export const physicsTopics: TopicDetail[] = [
   },
   {
     id: 'holography',
-    section: '04 · 理论物理前沿',
+    section: '05 · 理论物理前沿',
     sectionAnchor: 'physics',
     questions: ['matter'],
     related: ['emergent-spacetime', 'string', 'participatory', 'qm-foundations'],
@@ -210,7 +210,7 @@ export const physicsTopics: TopicDetail[] = [
   },
   {
     id: 'emergent-spacetime',
-    section: '04 · 理论物理前沿',
+    section: '05 · 理论物理前沿',
     sectionAnchor: 'physics',
     questions: ['matter', 'origin'],
     related: ['holography', 'lqg', 'string', 'relational'],

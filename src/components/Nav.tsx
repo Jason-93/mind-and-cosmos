@@ -7,6 +7,7 @@ const LINKS = [
   { id: 'philosophy', label: '哲学' },
   { id: 'mindbody', label: '身心' },
   { id: 'neuro', label: '神经' },
+  { id: 'freewill', label: '自由意志' },
   { id: 'physics', label: '物理' },
   { id: 'identity', label: '粒子与轮回' },
   { id: 'observer', label: '观测者' },

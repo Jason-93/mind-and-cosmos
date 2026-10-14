@@ -12,11 +12,12 @@ const CHIPS: { anchor: string; num: string; label: string; x: number; y: number 
   { anchor: 'philosophy', num: '01', label: '哲学', x: 306, y: 80 },
   { anchor: 'mindbody', num: '02', label: '身心', x: 600, y: 81 },
   { anchor: 'neuro', num: '03', label: '神经', x: 102, y: 313 },
-  { anchor: 'physics', num: '04', label: '物理前沿', x: 798, y: 313 },
-  { anchor: 'identity', num: '05', label: '量子身份', x: 103, y: 187 },
-  { anchor: 'observer', num: '06', label: '观测者', x: 797, y: 187 },
-  { anchor: 'cosmos', num: '07', label: '宇宙', x: 450, y: 435 },
-  { anchor: 'finale', num: '08', label: '结语', x: 450, y: 65 },
+  { anchor: 'freewill', num: '04', label: '自由意志', x: 80, y: 250 },
+  { anchor: 'physics', num: '05', label: '物理前沿', x: 798, y: 313 },
+  { anchor: 'identity', num: '06', label: '量子身份', x: 103, y: 187 },
+  { anchor: 'observer', num: '07', label: '观测者', x: 797, y: 187 },
+  { anchor: 'cosmos', num: '08', label: '宇宙', x: 450, y: 435 },
+  { anchor: 'finale', num: '09', label: '结语', x: 450, y: 65 },
 ]
 
 const CHIP_W = 104

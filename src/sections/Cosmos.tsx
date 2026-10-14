@@ -65,7 +65,7 @@ export default function Cosmos() {
   return (
     <section id="cosmos" className="relative mx-auto max-w-6xl px-6 py-28">
       <SectionHeading
-        index="07"
+        index="08"
         kicker="宇宙起源的解释"
         title="138 亿年前的第一秒"
         subtitle="宇宙学大概是人类最“年轻也最古老”的学科：它用几十年的精密仪器，回答创世神话问了几千年的问题。"

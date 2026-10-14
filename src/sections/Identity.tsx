@@ -32,7 +32,7 @@ export default function Identity() {
   return (
     <section id="identity" className="relative mx-auto max-w-6xl px-6 py-28">
       <SectionHeading
-        index="05"
+        index="06"
         kicker="量子身份之谜"
         title="全同、唯一与轮回：个体性的三重崩解"
         subtitle="量子力学在最深处松动了“这一个”的概念——三张卡片从三个方向逼近同一个问题：自然界真的保存“个体”吗？"

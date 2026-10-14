@@ -3,7 +3,7 @@ import type { TopicDetail } from './types'
 export const observerTopics: TopicDetail[] = [
   {
     id: 'delayed-choice',
-    section: '06 · 观测者的物理学',
+    section: '07 · 观测者的物理学',
     sectionAnchor: 'observer',
     questions: ['matter', 'mind'],
     related: ['eraser', 'participatory', 'qm-foundations', 'one-electron'],
@@ -59,7 +59,7 @@ export const observerTopics: TopicDetail[] = [
   },
   {
     id: 'eraser',
-    section: '06 · 观测者的物理学',
+    section: '07 · 观测者的物理学',
     sectionAnchor: 'observer',
     questions: ['matter', 'mind'],
     related: ['delayed-choice', 'qm-foundations', 'relational', 'contextuality'],
@@ -114,7 +114,7 @@ export const observerTopics: TopicDetail[] = [
   },
   {
     id: 'participatory',
-    section: '06 · 观测者的物理学',
+    section: '07 · 观测者的物理学',
     sectionAnchor: 'observer',
     questions: ['mind', 'matter', 'origin'],
     related: ['relational', 'holography', 'eraser', 'why-anything'],
@@ -170,7 +170,7 @@ export const observerTopics: TopicDetail[] = [
   },
   {
     id: 'relational',
-    section: '06 · 观测者的物理学',
+    section: '07 · 观测者的物理学',
     sectionAnchor: 'observer',
     questions: ['matter', 'mind'],
     related: ['participatory', 'eraser', 'emergent-spacetime', 'contextuality'],
@@ -226,7 +226,7 @@ export const observerTopics: TopicDetail[] = [
   },
   {
     id: 'contextuality',
-    section: '06 · 观测者的物理学',
+    section: '07 · 观测者的物理学',
     sectionAnchor: 'observer',
     questions: ['matter'],
     related: ['qm-foundations', 'eraser', 'relational', 'particle-identity'],

@@ -48,7 +48,7 @@ export default function Physics() {
   return (
     <section id="physics" className="relative mx-auto max-w-6xl px-6 py-28">
       <SectionHeading
-        index="04"
+        index="05"
         kicker="理论物理前沿学派"
         title="物质、时空与量子：基础正在重写"
         subtitle="广义相对论与量子力学是人类最成功的两个理论，却在彼此最核心的地带（黑洞、大爆炸）直接冲突。以下是试图缝合裂缝的几条主战线。"

@@ -3,7 +3,7 @@ import type { TopicDetail } from './types'
 export const cosmosTopics: TopicDetail[] = [
   {
     id: 'bigbang',
-    section: '07 · 宇宙起源',
+    section: '08 · 宇宙起源',
     sectionAnchor: 'cosmos',
     questions: ['origin'],
     related: ['inflation', 'dark', 'cyclic', 'question-origin'],
@@ -55,7 +55,7 @@ export const cosmosTopics: TopicDetail[] = [
   },
   {
     id: 'inflation',
-    section: '07 · 宇宙起源',
+    section: '08 · 宇宙起源',
     sectionAnchor: 'cosmos',
     questions: ['origin'],
     related: ['bigbang', 'cyclic', 'string', 'dark'],
@@ -108,7 +108,7 @@ export const cosmosTopics: TopicDetail[] = [
   },
   {
     id: 'dark',
-    section: '07 · 宇宙起源',
+    section: '08 · 宇宙起源',
     sectionAnchor: 'cosmos',
     questions: ['matter', 'origin'],
     related: ['bigbang', 'inflation', 'why-anything', 'cyclic'],
@@ -159,7 +159,7 @@ export const cosmosTopics: TopicDetail[] = [
   },
   {
     id: 'cyclic',
-    section: '07 · 宇宙起源',
+    section: '08 · 宇宙起源',
     sectionAnchor: 'cosmos',
     questions: ['origin'],
     related: ['bigbang', 'inflation', 'recurrence', 'lqg'],
@@ -211,7 +211,7 @@ export const cosmosTopics: TopicDetail[] = [
   },
   {
     id: 'why-anything',
-    section: '07 · 宇宙起源',
+    section: '08 · 宇宙起源',
     sectionAnchor: 'cosmos',
     questions: ['origin'],
     related: ['cyclic', 'bigbang', 'question-origin', 'participatory'],
@@ -264,7 +264,7 @@ export const cosmosTopics: TopicDetail[] = [
   },
   {
     id: 'abiogenesis',
-    section: '07 · 宇宙起源',
+    section: '08 · 宇宙起源',
     sectionAnchor: 'cosmos',
     questions: ['origin'],
     related: ['fermi', 'bigbang', 'evolution', 'inflation'],
@@ -319,7 +319,7 @@ export const cosmosTopics: TopicDetail[] = [
   },
   {
     id: 'fermi',
-    section: '07 · 宇宙起源',
+    section: '08 · 宇宙起源',
     sectionAnchor: 'cosmos',
     questions: ['origin'],
     related: ['abiogenesis', 'dark', 'recurrence', 'inflation'],

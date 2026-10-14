@@ -4,6 +4,7 @@ import { mapTopics } from './topics-map'
 import { philosophyTopics } from './topics-philosophy'
 import { mindBodyTopics } from './topics-mindbody'
 import { neuroscienceTopics } from './topics-neuro'
+import { freewillTopics } from './topics-freewill'
 import { physicsTopics } from './topics-physics'
 import { identityTopics } from './topics-identity'
 import { observerTopics } from './topics-observer'
@@ -14,6 +15,7 @@ export const ALL_TOPICS: TopicDetail[] = [
   ...philosophyTopics,
   ...mindBodyTopics,
   ...neuroscienceTopics,
+  ...freewillTopics,
   ...physicsTopics,
   ...identityTopics,
   ...observerTopics,

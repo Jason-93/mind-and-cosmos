@@ -11,11 +11,12 @@ const SECTIONS = [
   { value: 'philosophy', label: '第一章 · 哲学' },
   { value: 'mindbody', label: '第二章 · 身心' },
   { value: 'neuro', label: '第三章 · 神经' },
-  { value: 'physics', label: '第四章 · 物理前沿' },
-  { value: 'identity', label: '第五章 · 量子身份' },
-  { value: 'observer', label: '第六章 · 观测者' },
-  { value: 'cosmos', label: '第七章 · 宇宙' },
-  { value: 'finale', label: '第八章 · 结语' },
+  { value: 'freewill', label: '第四章 · 自由意志' },
+  { value: 'physics', label: '第五章 · 物理前沿' },
+  { value: 'identity', label: '第六章 · 量子身份' },
+  { value: 'observer', label: '第七章 · 观测者' },
+  { value: 'cosmos', label: '第八章 · 宇宙' },
+  { value: 'finale', label: '第九章 · 结语' },
 ]
 
 const QUESTIONS: Question[] = ['mind', 'matter', 'origin']

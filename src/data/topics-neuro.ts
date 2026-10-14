@@ -57,7 +57,7 @@ export const neuroscienceTopics: TopicDetail[] = [
     section: '03 · 神经科学',
     sectionAnchor: 'neuro',
     questions: ['mind'],
-    related: ['split-brain', 'evolution', 'gwt', 'predictive'],
+    related: ['split-brain', 'free-will-neuro', 'gwt', 'predictive'],
     tag: '自由意志之争',
     title: '利贝特实验：大脑先“决定”，你才“觉得”',
     lead: '1983 年，本杰明·利贝特发表了一组简单却爆炸性的实验：让受试者自由决定何时弯曲手腕，同时用脑电记录运动准备电位。结果：准备电位（RP）平均在主观决意感（W）之前约 350 毫秒出现——脑似乎在你“决定”之前就已经开始行动。这个发现被《自然》等杂志反复报道，被许多人视为“自由意志已死”的科学讣告。',
