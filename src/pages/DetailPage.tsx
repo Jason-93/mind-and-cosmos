@@ -1,7 +1,8 @@
 import { Link, useNavigate, useParams } from 'react-router'
-import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, Lightbulb, MessageSquareQuote } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, Compass, Lightbulb, MessageSquareQuote } from 'lucide-react'
 import Starfield from '@/components/Starfield'
 import { TOPIC_MAP, getNeighbors } from '@/data/topics'
+import { QUESTION_META } from '@/lib/questions'
 import { scrollToId } from '@/lib/scroll'
 
 export default function DetailPage() {
@@ -61,6 +62,17 @@ export default function DetailPage() {
           <span className="mb-5 inline-block rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-slate-300">
             {topic.tag}
           </span>
+          <div className="mb-5 flex flex-wrap items-center gap-2">
+            {topic.questions.map((q) => (
+              <span
+                key={q}
+                className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs ${QUESTION_META[q].pill}`}
+              >
+                <span className={`h-1.5 w-1.5 rounded-full ${QUESTION_META[q].dot}`} />
+                {QUESTION_META[q].label}
+              </span>
+            ))}
+          </div>
           <h1 className="font-serif-sc text-3xl font-bold leading-snug md:text-5xl">{topic.title}</h1>
           <p className="mt-7 border-l-2 border-violet-400/50 pl-5 text-base leading-loose text-slate-300 md:text-lg">
             {topic.lead}
@@ -120,6 +132,32 @@ export default function DetailPage() {
                 </li>
               ))}
             </ul>
+          </section>
+
+          {/* 相关主题 */}
+          <section className="mt-14">
+            <h2 className="font-serif-sc mb-5 flex items-center gap-2 text-xl font-bold">
+              <Compass className="h-5 w-5 text-cyan-300" />
+              相关主题
+            </h2>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {topic.related.map((rid) => {
+                const rel = TOPIC_MAP[rid]
+                if (!rel) return null
+                return (
+                  <Link
+                    key={rid}
+                    to={`/topic/${rid}`}
+                    className="glass glass-hover group rounded-xl p-4"
+                  >
+                    <p className="text-[11px] tracking-wider text-slate-500">{rel.tag}</p>
+                    <p className="font-serif-sc mt-1 text-sm font-semibold leading-snug text-slate-200 group-hover:text-white">
+                      {rel.title}
+                    </p>
+                  </Link>
+                )
+              })}
+            </div>
           </section>
 
           {/* 上一篇 / 下一篇 */}

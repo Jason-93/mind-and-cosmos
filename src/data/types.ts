@@ -8,11 +8,18 @@ export type DebatePoint = {
   text: string
 }
 
+/** 三问：心智之问 / 物质之问 / 起源之问 */
+export type Question = 'mind' | 'matter' | 'origin'
+
 export type TopicDetail = {
   id: string
   section: string
   sectionAnchor: string
   tag: string
+  /** 该主题主要回应的三问 */
+  questions: Question[]
+  /** 相关主题（详情页“相关主题”区块引用） */
+  related: string[]
   title: string
   lead: string
   blocks: TopicBlock[]

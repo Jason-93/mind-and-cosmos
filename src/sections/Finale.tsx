@@ -1,6 +1,29 @@
 import { Lightbulb, BookOpen } from 'lucide-react'
+import { Link } from 'react-router'
 import Reveal from '@/components/Reveal'
 import { SectionHeading, ThoughtBox, type Accent } from '@/components/ui-bits'
+import { TOPIC_MAP } from '@/data/topics'
+
+const ROUTES: { kicker: string; title: string; desc: string; steps: string[] }[] = [
+  {
+    kicker: '意识线',
+    title: '从“我思”到“参与”',
+    desc: '沿着身心问题的主线走一遍：从笛卡尔的确定性出发，穿过实验神经科学，抵达“观测者参与造世”的激进终点。',
+    steps: ['descartes', 'physicalism', 'split-brain', 'gwt', 'iit', 'evolution', 'participatory'],
+  },
+  {
+    kicker: '物理线',
+    title: '物质的骨架与深渊',
+    desc: '从量子力学的基础悬念出发，经全同粒子、单电子宇宙，到延迟选择、全息原理与时空涌现——“物质”被一层层拆掉又重建。',
+    steps: ['qm-foundations', 'particle-identity', 'one-electron', 'delayed-choice', 'contextuality', 'holography', 'emergent-spacetime'],
+  },
+  {
+    kicker: '存在问题线',
+    title: '“为什么是有”',
+    desc: '从各文明的起源叙事出发，经斯宾诺莎与跨文明母题，走到轮回、循环宇宙与费米悖论——“存在”本身的追问链。',
+    steps: ['greek', 'spinoza', 'motifs', 'recurrence', 'cyclic', 'why-anything', 'fermi'],
+  },
+]
 
 const TIMELINE: { year: string; text: string; accent: Accent }[] = [
   { year: '前 6 世纪', text: '泰勒斯提出"万物源于水"，希腊自然哲学开端；同一时期，印度与中国思想传统相继成形。', accent: 'amber' },
@@ -83,6 +106,42 @@ export default function Finale() {
             </Reveal>
           ))}
         </div>
+      </div>
+
+      {/* 三条重走路线 */}
+      <Reveal className="mt-24">
+        <h3 className="font-serif-sc mb-3 text-center text-3xl font-bold">三条重走路线</h3>
+        <p className="mx-auto mb-10 max-w-xl text-center text-sm leading-relaxed text-slate-400">
+          如果不想按章节顺序重读，可以沿着下面三条线索，把散布在全站的主题串成各自的论证链。
+        </p>
+      </Reveal>
+      <div className="grid gap-6 lg:grid-cols-3">
+        {ROUTES.map((r, i) => (
+          <Reveal key={r.title} delay={i * 120} className="h-full">
+            <div className="glass flex h-full flex-col rounded-2xl p-6">
+              <p className="mb-1 text-xs font-medium tracking-[0.3em] text-indigo-300">{r.kicker}</p>
+              <h4 className="font-serif-sc mb-2 text-lg font-semibold">{r.title}</h4>
+              <p className="mb-5 text-sm leading-relaxed text-slate-400">{r.desc}</p>
+              <ol className="mt-auto space-y-1">
+                {r.steps.map((sid, idx) => {
+                  const t = TOPIC_MAP[sid]
+                  if (!t) return null
+                  return (
+                    <li key={sid}>
+                      <Link
+                        to={`/topic/${sid}`}
+                        className="group flex items-baseline gap-2 rounded-lg px-2 py-1.5 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white"
+                      >
+                        <span className="w-4 shrink-0 text-xs text-slate-600">{idx + 1}.</span>
+                        <span className="leading-snug group-hover:underline">{t.title}</span>
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ol>
+            </div>
+          </Reveal>
+        ))}
       </div>
 
       {/* 延伸阅读 */}

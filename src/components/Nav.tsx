@@ -4,15 +4,13 @@ import { Orbit, Menu, X } from 'lucide-react'
 import { scrollToId } from '@/lib/scroll'
 
 const LINKS = [
-  { id: 'map', label: '导读' },
-  { id: 'philosophy', label: '哲学与宗教' },
-  { id: 'mindbody', label: '身心一元二元' },
-  { id: 'neuro', label: '神经科学' },
-  { id: 'physics', label: '物理前沿' },
+  { id: 'philosophy', label: '哲学' },
+  { id: 'mindbody', label: '身心' },
+  { id: 'neuro', label: '神经' },
+  { id: 'physics', label: '物理' },
   { id: 'identity', label: '粒子与轮回' },
   { id: 'observer', label: '观测者' },
-  { id: 'cosmos', label: '宇宙起源' },
-  { id: 'finale', label: '结语' },
+  { id: 'cosmos', label: '宇宙' },
 ]
 
 export default function Nav() {
@@ -84,6 +82,15 @@ export default function Nav() {
               {l.label}
             </button>
           ))}
+          <button
+            onClick={() => {
+              setOpen(false)
+              navigate('/topics')
+            }}
+            className="ml-2 rounded-full border border-violet-400/30 bg-violet-500/10 px-3.5 py-1.5 text-sm text-violet-300 transition hover:border-violet-400/60 hover:text-violet-200"
+          >
+            索引
+          </button>
         </div>
         <button
           className="text-slate-300 md:hidden"
@@ -104,6 +111,15 @@ export default function Nav() {
               {l.label}
             </button>
           ))}
+          <button
+            onClick={() => {
+              setOpen(false)
+              navigate('/topics')
+            }}
+            className="mt-1 block w-full rounded-lg border border-violet-400/30 bg-violet-500/10 px-3 py-2.5 text-left text-sm text-violet-300"
+          >
+            全站主题索引
+          </button>
         </div>
       )}
     </header>

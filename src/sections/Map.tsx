@@ -1,5 +1,6 @@
 import { Brain, Atom, Sparkles, HelpCircle } from 'lucide-react'
 import { SectionHeading, ConceptCard, ThoughtBox, type Accent } from '@/components/ui-bits'
+import MapDiagram from '@/components/MapDiagram'
 
 const QUESTIONS: { id: string; icon: typeof Brain; title: string; body: string; accent: Accent }[] = [
   {
@@ -40,6 +41,7 @@ export default function Map() {
           <ConceptCard key={q.title} id={q.id} icon={q.icon} title={q.title} body={q.body} accent={q.accent} delay={i * 120} />
         ))}
       </div>
+      <MapDiagram />
       <div className="mt-14">
         <ThoughtBox label="漫游须知" title="请带着三个问题往下读" accent="indigo">
           <p>
