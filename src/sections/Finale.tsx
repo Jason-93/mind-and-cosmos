@@ -30,10 +30,10 @@ export default function Finale() {
   return (
     <section id="finale" className="relative mx-auto max-w-6xl px-6 py-28">
       <SectionHeading
-        index="06"
+        index="07"
         kicker="结语"
         title="所有道路，都通回那个提问的人"
-        subtitle="漫游结束。把三章问题叠在一起看，会出现一幅完整的图：观察者、物质与起源，互为镜像。"
+        subtitle="漫游结束。把所有问题叠在一起看，会出现一幅完整的图：观察者、物质与起源，互为镜像。"
         accent="indigo"
       />
 

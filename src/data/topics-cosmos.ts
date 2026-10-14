@@ -3,7 +3,7 @@ import type { TopicDetail } from './types'
 export const cosmosTopics: TopicDetail[] = [
   {
     id: 'bigbang',
-    section: '05 · 宇宙起源',
+    section: '06 · 宇宙起源',
     sectionAnchor: 'cosmos',
     tag: '主流图景',
     title: '大爆炸：一场没有中心的“爆炸”',
@@ -53,7 +53,7 @@ export const cosmosTopics: TopicDetail[] = [
   },
   {
     id: 'inflation',
-    section: '05 · 宇宙起源',
+    section: '06 · 宇宙起源',
     sectionAnchor: 'cosmos',
     tag: '补丁与深化',
     title: '暴胀：第一秒内的指数狂奔',
@@ -104,7 +104,7 @@ export const cosmosTopics: TopicDetail[] = [
   },
   {
     id: 'dark',
-    section: '05 · 宇宙起源',
+    section: '06 · 宇宙起源',
     sectionAnchor: 'cosmos',
     tag: '成分之谜',
     title: '暗物质与暗能量：宇宙的 95% 是“暗”的',
@@ -153,7 +153,7 @@ export const cosmosTopics: TopicDetail[] = [
   },
   {
     id: 'cyclic',
-    section: '05 · 宇宙起源',
+    section: '06 · 宇宙起源',
     sectionAnchor: 'cosmos',
     tag: '替代图景',
     title: '循环宇宙：废黜“起点”的三次尝试',
@@ -203,7 +203,7 @@ export const cosmosTopics: TopicDetail[] = [
   },
   {
     id: 'why-anything',
-    section: '05 · 宇宙起源',
+    section: '06 · 宇宙起源',
     sectionAnchor: 'cosmos',
     tag: '终极之问',
     title: '为何有物存在，而不是一无所有？',
